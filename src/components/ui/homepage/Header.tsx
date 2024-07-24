@@ -1,3 +1,28 @@
+import { NavLink } from "react-router-dom";
+
+const navLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Products",
+    path: "/products",
+  },
+  {
+    name: "Management",
+    path: "/products/management",
+  },
+  {
+    name: "Cart",
+    path: "/products/cart",
+  },
+  {
+    name: "About Us",
+    path: "/about",
+  },
+];
+
 const Header = () => {
   return (
     <div className="navbar bg-base-100">
@@ -9,13 +34,13 @@ const Header = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {/* mapping navlinks and showing */}
-            {/* {navLinks.map((navlink, index) => (
+            {navLinks.map((navlink, index) => (
               <li key={index}>
                 <a className="px-4">
                   <NavLink to={navlink.path}>{navlink.name}</NavLink>
                 </a>
               </li>
-            ))} */}
+            ))}
             menu
           </ul>
         </div>
@@ -29,13 +54,13 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex navbar-end">
         <ul className="menu menu-horizontal px-1">
           {/* mapping navlinks and showing */}
-          {/* {navLinks.map((navlink, index) => (
+          {navLinks.map((navlink, index) => (
             <li key={index}>
               <a className="px-4">
                 <NavLink to={navlink.path}>{navlink.name}</NavLink>
               </a>
             </li>
-          ))} */}
+          ))}
           menu2
         </ul>
       </div>
