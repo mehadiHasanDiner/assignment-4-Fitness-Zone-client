@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from "./../../../assets/images/logo.png";
+import { useState } from "react";
 
 const navLinks = [
   {
@@ -24,47 +26,90 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const active = {
+    color: "yellow",
+    fontWeight: "bold",
+  };
+
+  const inactive = {
+    color: "white",
+  };
+
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          Logo
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            {/* mapping navlinks and showing */}
-            {navLinks.map((navlink, index) => (
-              <li key={index}>
-                <a className="px-4">
-                  <NavLink to={navlink.path}>{navlink.name}</NavLink>
-                </a>
-              </li>
-            ))}
-            menu
-          </ul>
-        </div>
-        <div className="flex justify-center items-center navbar-center">
-          <img className="size-7" src="/favicon.png" alt="" />
-          <a className="text-xl font-bold ml-2">
-            Fitness <span className="text-primary">Z</span>one
-          </a>
+    <header className="bg-gradient-to-t from-blue-700 to-blue-400 text-white p-2 rounded-b-md shadow-xl">
+      <div className=" flex justify-between">
+        <nav className={isMenuOpen ? "" : "flex justify-between w-full"}>
+          <div className="flex justify-between ">
+            <div className="">
+              <Link to={"/"}>
+                <div className={"flex items-center"}>
+                  <img className="pr-2" width={45} src={logo} alt="" />
+                  <p className="text-2xl font-bold">GYM Media</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="pt-2 ">
+            <ul
+              className={
+                isMenuOpen
+                  ? "flex flex-col space-y-3 pt-4 pl-2"
+                  : "hidden md:flex space-x-5"
+              }
+            >
+              {navLinks.map((navItem, index) => (
+                <li className=" hover:text-yellow-400" key={index}>
+                  <NavLink
+                    style={({ isActive }: { isActive: any }) =>
+                      isActive ? active : inactive
+                    }
+                    to={navItem.path}
+                  >
+                    {navItem.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        {/* mobile menubar button */}
+        <div className={isMenuOpen ? "" : "md:hidden"}>
+          <button onClick={handleMenuToggle}>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex navbar-end">
-        <ul className="menu menu-horizontal px-1">
-          {/* mapping navlinks and showing */}
-          {navLinks.map((navlink, index) => (
-            <li key={index}>
-              <a className="px-4">
-                <NavLink to={navlink.path}>{navlink.name}</NavLink>
-              </a>
-            </li>
-          ))}
-          menu2
-        </ul>
-      </div>
-    </div>
+    </header>
   );
 };
 
