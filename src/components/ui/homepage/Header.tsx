@@ -65,7 +65,11 @@ const Header = () => {
               }
             >
               {navLinks.map((navItem, index) => (
-                <li className=" hover:text-yellow-400" key={index}>
+                <li
+                  onClick={handleMenuToggle}
+                  className=" hover:text-yellow-400"
+                  key={index}
+                >
                   <NavLink
                     style={({ isActive }: { isActive: any }) =>
                       isActive ? active : inactive

@@ -1,9 +1,9 @@
-import Banner from "../components/ui/homepage/Banner";
+import Banner from "../components/ui/homepage/Banner/Banner";
 
 const HomePage = () => {
     return (
          <div className="space-y-12"> 
-             {/* <Banner></Banner> */}
+             <Banner></Banner>
          </div>
     );
 };
