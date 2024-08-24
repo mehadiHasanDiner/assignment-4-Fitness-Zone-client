@@ -1,5 +1,4 @@
-import { categoriesArr } from "../../../../utils/categoriesData";
-
+import { categoriesData } from "../../../../utils/categoriesData";
 
 type TCategoriesCardProps = {
   handleCategory: (category: string) => void;
@@ -11,7 +10,7 @@ const ProductByCategoryCard = ({ handleCategory }: TCategoriesCardProps) => {
       <div className="my-8">
         <h2 className="text-2xl font-bold mb-4"> Product Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {categoriesArr?.map((category, index) => (
+          {categoriesData?.map((category, index) => (
             <div
               key={index}
               className="cursor-pointer border p-4 rounded-lg"
@@ -24,7 +23,9 @@ const ProductByCategoryCard = ({ handleCategory }: TCategoriesCardProps) => {
                   alt={category.name}
                 />
               </div>
-              <h2 className="text-center text-xl font-semibold mt-2">{category.name}</h2>
+              <h2 className="text-center text-xl font-semibold mt-2">
+                {category.name}
+              </h2>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import productApi from "../../../redux/features/product/productApi";
-import ProgressBar from "../../../global/ProgressBar";
-import ErrorPage from "../../../global/ErrorPage";
+import LoadingBar from "../../../global/LoadingBar/ProgressBar";
+import ErrorPage from "../../../global/ErrorPage/ErrorPage";
 import FeaturedProductCard from "./card/FeaturedProduct";
 
 const FeaturedProduct = () => {
@@ -25,7 +25,7 @@ const FeaturedProduct = () => {
   if (isLoading) {
     return (
       <div>
-        <ProgressBar></ProgressBar>
+        <LoadingBar></LoadingBar>
       </div>
     );
   }

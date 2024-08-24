@@ -1,4 +1,4 @@
-export const categoriesArr = [
+export const categoriesData = [
   {
     name: "Yoga item",
     image: "https://cdn-icons-png.flaticon.com/512/3047/3047371.png",
