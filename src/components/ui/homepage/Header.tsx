@@ -50,7 +50,7 @@ const Header = () => {
               <Link to={"/"}>
                 <div className={"flex items-center"}>
                   <img className="pr-2" width={45} src={logo} alt="" />
-                  <p className="text-2xl font-bold">GYM Media</p>
+                  <p className="text-2xl font-bold">GYM Shop</p>
                 </div>
               </Link>
             </div>
@@ -71,7 +71,7 @@ const Header = () => {
                   key={index}
                 >
                   <NavLink
-                    style={({ isActive }: { isActive: any }) =>
+                    style={({ isActive }: { isActive: boolean }) =>
                       isActive ? active : inactive
                     }
                     to={navItem.path}
