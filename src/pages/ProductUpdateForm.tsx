@@ -81,9 +81,10 @@ const ProductUpdateForm = () => {
                     <option disabled selected>
                       Select Category
                     </option>
-                    <option>Accessories</option>
-                    <option>Gym Equipment</option>
-                    <option>Cardio Equipment</option>
+                    <option>Yoga</option>
+                    <option>Gym</option>
+                    <option>Meditation</option>
+                    <option>Physical Exercise</option>
                   </select>
                 </div>
                 <div className="form-control">
@@ -98,10 +99,10 @@ const ProductUpdateForm = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Image</span>
+                    <span className="label-text">Image Url</span>
                   </label>
                   <input
-                    type="file"
+                    type="text"
                     className="w-full px-3 py-2 border rounded"
                     {...register("image")}
                   />

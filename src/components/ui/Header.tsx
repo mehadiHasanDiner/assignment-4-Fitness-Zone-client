@@ -32,14 +32,14 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const active = {
-    color: "yellow",
-    fontWeight: "bold",
-  };
+  // const active = {
+  //   color: "yellow",
+  //   fontWeight: "bold",
+  // };
 
-  const inactive = {
-    color: "white",
-  };
+  // const inactive = {
+  //   color: "white",
+  // };
 
   return (
     <header className="bg-gradient-to-t from-blue-700 to-blue-400 text-white p-2 rounded-b-md shadow-xl">
@@ -65,15 +65,11 @@ const Header = () => {
               }
             >
               {navLinks.map((navItem, index) => (
-                <li
-                  onClick={handleMenuToggle}
-                  className=" hover:text-yellow-400"
-                  key={index}
-                >
+                <li className=" hover:text-yellow-400" key={index}>
                   <NavLink
-                    style={({ isActive }: { isActive: boolean }) =>
-                      isActive ? active : inactive
-                    }
+                    // style={({ isActive }: { isActive: boolean }) =>
+                    //   isActive ? active : inactive
+                    // }
                     to={navItem.path}
                   >
                     {navItem.name}

@@ -9,6 +9,7 @@ import ProductManagementForm from "../pages/ProductManagementForm";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
 import CheckoutSuccess from "../pages/CheckoutSuccess";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage></HomePage>,
+      },
+      {
+        path: "about",
+        element: <AboutUs></AboutUs>,
       },
     ],
   },
