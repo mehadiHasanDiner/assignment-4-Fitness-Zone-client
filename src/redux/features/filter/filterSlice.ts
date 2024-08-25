@@ -19,13 +19,13 @@ export const filterSlice = createSlice({
         state.categories.push(action.payload);
       }
     },
+    setSort: (state, action) => {
+      state.sort = action.payload;
+    },
     removeCategory(state, action) {
       state.categories = state.categories.filter(
         (category) => category !== action.payload
       );
-    },
-    setSort: (state, action) => {
-      state.sort = action.payload;
     },
     clearFilters: (state) => {
       state.searchTerm = null;

@@ -31,21 +31,21 @@ const productApi = baseApi.injectEndpoints({
       },
       providesTags: ["product"],
     }),
-    updateProduct: builder.mutation({
-      query: ({ id, product }) => {
-        return {
-          url: `/products/${id}`,
-          method: "PATCH",
-          body: product,
-        };
-      },
-      invalidatesTags: ["product"],
-    }),
     createProduct: builder.mutation({
       query: (product) => {
         return {
           url: "/products",
           method: "POST",
+          body: product,
+        };
+      },
+      invalidatesTags: ["product"],
+    }),
+    updateProduct: builder.mutation({
+      query: ({ id, product }) => {
+        return {
+          url: `/products/${id}`,
+          method: "PATCH",
           body: product,
         };
       },
