@@ -51,38 +51,42 @@ const ProductPage = () => {
 
   return (
     <>
-      <div className="mb-8">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-          <SearchField></SearchField>
-          {/* category */}
-          <Category></Category>
+      <div className="my-3 flex">
+        <div className="flex-none max-w-[25%] mr-6">
+          <div className="mb-8 ">
+            <SearchField></SearchField>
+            {/* category */}
+            <Category></Category>
 
-          {/* sorting */}
-          <SortingField></SortingField>
-          {/* clear button */}
-          <ClearFilterBtn></ClearFilterBtn>
+            {/* sorting */}
+            <SortingField></SortingField>
+            {/* clear button */}
+            <ClearFilterBtn></ClearFilterBtn>
+          </div>
         </div>
 
-        <h1 className="text-2xl font-bold mb-4">Products</h1>
+        <div className="flex-initial w-[75%]">
+          <h1 className="text-2xl font-bold mb-4">Products</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {products?.data?.map((product: TProduct) => (
-            <div key={product._id} className="border p-4">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover mb-4"
-              />
-              <h2 className="text-xl">{product.name}</h2>
-              <p>Price: ${product.price}</p>
-              <button
-                onClick={() => handleViewDetails(product._id!)}
-                className="btn btn-primary mt-2"
-              >
-                View Details
-              </button>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {products?.data?.map((product: TProduct) => (
+              <div key={product._id} className="border p-4">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-48 object-cover mb-4"
+                />
+                <h2 className="text-xl">{product.name}</h2>
+                <p>Price: ${product.price}</p>
+                <button
+                  onClick={() => handleViewDetails(product._id!)}
+                  className="card-button mt-2"
+                >
+                  View Details
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

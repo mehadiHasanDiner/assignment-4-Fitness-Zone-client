@@ -14,19 +14,19 @@ const SearchField = () => {
   );
   return (
     <>
-      <label className="input input-bordered flex items-center gap-2">
+      <div className="border-2 border-gray-500 p-1 rounded-lg flex items-center mt-3  sm:flex-wrap justify-end">
         <input
           // onChange={(e) => dispatch(setSearchTerm(e.target.value))}
           onChange={(e) => debouncedSetSearchTerm(e.target.value)}
           type="text"
-          className="grow"
+          className="grow max-w-full"
           placeholder="Search"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fill="currentColor"
-          className="h-4 w-4 opacity-70"
+          className="h-5 w-5 opacity-70"
         >
           <path
             fillRule="evenodd"
@@ -34,7 +34,7 @@ const SearchField = () => {
             clipRule="evenodd"
           />
         </svg>
-      </label>
+      </div>
     </>
   );
 };
