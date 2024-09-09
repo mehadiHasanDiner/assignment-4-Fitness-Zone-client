@@ -1,6 +1,6 @@
 ## 🛒 GYM Shop
 
-[Live URL](https://fitness-hub-ruby.vercel.app/)
+🎬[Live URL](https://assignment-4-fitness-zone-client.vercel.app/)
 
 This is the frontend section of the GYM Shop e-commerce application, developed using React, React Router DOM, Redux, RTK Query, Tailwind CSS, and DaisyUI.
 
