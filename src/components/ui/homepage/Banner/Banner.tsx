@@ -52,7 +52,7 @@ const Banner = () => {
   const progressContent = useRef<HTMLSpanElement>(null);
 
   const onAutoplayTimeLeft = (
-    s: SwiperType,
+    _s: SwiperType,
     time: number,
     progress: number
   ) => {

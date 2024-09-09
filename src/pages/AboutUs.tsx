@@ -7,25 +7,23 @@ const AboutUs = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Company Overview</h2>
             <p className="text-lg">
-              Our company has a rich history of providing the best gym equipment
-              and accessories to help you achieve your fitness goals. Our
-              mission is to empower people to lead healthier lives, and our
-              vision is to become the leading provider of fitness solutions
-              worldwide.
+              Our company has a long-standing tradition of delivering
+              top-quality gym equipment and accessories designed to help you
+              reach your fitness goals. Our mission is to inspire individuals to
+              live healthier lives, and our vision is to be the global leader in
+              fitness solutions.
             </p>
           </div>
-
-       
 
           {/* Contact Information */}
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
             <p className="text-lg">
-              Have questions or feedback? We'd love to hear from you!
+              Got questions or feedback? We are eager to hear from you!
             </p>
-            <p className="mt-2">Email: ahmedhimel000@gmail.com</p>
-            <p>Phone: (+880) 01800000000 </p>
-            <p>Address: 123 Fitness Hub, Jashore, Bangladesh</p>
+            <p className="mt-2">Email: mehadi@gmail.com</p>
+            <p>Phone: (+880) 0964500045 </p>
+            <p>Address: 123 GYM Shop, Dhaka-1000, Bangladesh</p>
           </div>
         </div>
       </>
