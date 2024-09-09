@@ -13,7 +13,7 @@ const ProductDetailsCard = ({
 }: TProductDetailsProps) => {
   return (
     <>
-      <div className="card card-side bg-base-100 shadow-xl mb-8">
+      <div className="card card-side bg-base-100 shadow-xl my-8 ">
         <figure>
           <img
             className="w-full md:h-96"

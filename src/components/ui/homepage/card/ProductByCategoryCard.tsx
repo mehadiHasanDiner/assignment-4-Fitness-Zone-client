@@ -18,7 +18,7 @@ const ProductByCategoryCard = ({ handleCategory }: TCategoriesCardProps) => {
             >
               <div className="w-full h-48 flex items-center justify-center">
                 <img
-                  className="w-full h-48 object-contain"
+                  className="w-full h-48 object-contain transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 "
                   src={category.image}
                   alt={category.name}
                 />

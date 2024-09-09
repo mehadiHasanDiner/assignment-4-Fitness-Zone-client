@@ -1,4 +1,4 @@
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 import { setToCart } from "../redux/features/cart/cartSlice";
 import ErrorPage from "../global/ErrorPage/ErrorPage";
 import LoadingBar from "../global/LoadingBar/ProgressBar";
@@ -34,11 +34,12 @@ const ProductDetails = () => {
   const handleAddToCart = async () => {
     if (!isProductOutOfStock) {
       dispatch(setToCart(product));
-      toast.success("Successfully added cart!");
+      toast.success("Product added Successfully!!");
     }
   };
   return (
     <div>
+      <Toaster />
       <ProductDetailsCard
         product={product}
         handleAddToCart={handleAddToCart}
